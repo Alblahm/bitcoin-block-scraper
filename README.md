@@ -1,7 +1,7 @@
 # bitcoin-block-scraper (Python 3.6+)
 Generate Bitcoin datasets (blocks and their transactions) in JSON format.
 
-### Download blocks starting at height 0
+### Download N blocks starting at selected height
 ```bash
-python blockchain_scraper.py
+python3 blockchain_scraper_height.py
 ```

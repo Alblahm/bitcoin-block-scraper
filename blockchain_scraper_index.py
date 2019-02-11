@@ -142,7 +142,11 @@ def download(height=0):
 
 
 # La transacción más alta que se puede descargar con block index es 170515
-if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
-    download(50000)
+    if len(sys.argv) == 2:
+        initBlock = int(sys.argv[1])
+    else:
+        initBlock = 190031
+
+    download(initBlock)
     print('\n')

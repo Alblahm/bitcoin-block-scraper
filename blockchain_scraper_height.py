@@ -143,7 +143,11 @@ def download(height=0):
 
 
 # Con block height no hay límite en la altura del bloque, hasta el nivel actual
-if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
-    download(190031)    # 190031-> 1 Tx
+    if len(sys.argv) == 2:
+        initBlock = int(sys.argv[1])
+    else:
+        initBlock = 190031
+
+    download(initBlock)    # 190031-> 1 Tx
     print('\n')
